@@ -105,7 +105,7 @@ class DicomHeaderParser:
         self.dicomSeriesInstanceUIDs_fileCounter[seriesInstanceUID] = 1
         dicomFileDict = {tag:str(element.value) for (tag,element) in dicomFileHeader.iteritems() if '\x00' not in str(element.value)}
         dicomFileDict = collections.OrderedDict(sorted(dicomFileDict.items(), key=lambda t: t[0]))
-        dicomFileDict_list.append(dicomFileDict))   
+        dicomFileDict_list.append(dicomFileDict)   
     return dicomFileDict_list
 
     
